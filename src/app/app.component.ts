@@ -1,5 +1,6 @@
 import { Component, Inject } from '@angular/core';
 import { MediaObserver } from '@angular/flex-layout';
+
 import { WindowToken } from './app.module';
 
 interface CardData {

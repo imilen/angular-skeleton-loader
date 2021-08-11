@@ -4,6 +4,7 @@ import {
   ChangeDetectorRef, AfterViewInit
 } from '@angular/core';
 import { forkJoin, Observable } from 'rxjs';
+
 import { CardService } from '../card.service';
 
 @Component({
