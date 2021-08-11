@@ -27,7 +27,9 @@ export function windowProvider() { return window; }
       registrationStrategy: 'registerWhenStable:30000'
     })
   ],
-  providers: [],
+  providers: [
+    { provide: WindowToken, useFactory: windowProvider }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
