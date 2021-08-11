@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
+    "serve": "npx http-server -p 4200 -c-1 ./dist/angular-skeleton-loader",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
