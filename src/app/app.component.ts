@@ -48,6 +48,6 @@ export class AppComponent {
         logo: '../../assets/angular-logo.svg',
       } as CardData);
       this.mediaObserver.ngOnDestroy();
-    }, 3 * 1000);
+    }, 1000);
   }
 }

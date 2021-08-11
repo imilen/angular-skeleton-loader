@@ -18,7 +18,7 @@ export class CardService {
 
   get(str: string) {
     return of(str).pipe(
-      delay(this.getRandomTimeout(100, 5000)),
+      delay(this.getRandomTimeout(100, 3000)),
       distinctUntilChanged(),
     )
   }
