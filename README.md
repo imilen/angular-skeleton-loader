@@ -1,6 +1,8 @@
 # AngularSkeletonLoader
 Implementing a skeleton loading screen in the angular app.
 
+![image](https://user-images.githubusercontent.com/62542434/129085765-52f55abe-4f37-4fd7-bdb9-ac9817837f89.gif)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
 ## Development server
