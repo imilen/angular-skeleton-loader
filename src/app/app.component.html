@@ -2,13 +2,17 @@
      fxFill
      fxFlexAlign="center"
      style="overflow: auto;">
-  <div fxFlex="grow"
-       fxLayout="row wrap"
-       fxLayoutAlign="center center"
-       fxFlexAlign="center">
-    <div *ngFor="let item of list; let i = index"
-         style="margin: 10px">
-      <!-- TODO: show cards with data -->
-    </div>
-  </div>
+   <div fxFlex="grow"
+        fxLayout="row wrap"
+        fxLayoutAlign="center center"
+        fxFlexAlign="center">
+      <div *ngFor="let item of list; let i = index"
+           style="margin: 10px">
+         <app-card [title]="item.title"
+                   [img]="item.img"
+                   [description]="item.description"
+                   [logo]="item.logo"
+                   [index]=i></app-card>
+      </div>
+   </div>
 </div>

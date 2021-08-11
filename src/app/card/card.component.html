@@ -1,1 +1,43 @@
-<p>card works!</p>
+<div>
+    <mat-card fxFlex="400px"
+              fxFlex.xs="300px">
+        <mat-card-header>
+            <div id="avatar-{{index}}"
+                 mat-card-avatar
+                 [ngStyle]="avatarStyle"
+                 style="background-size: cover;"></div>
+
+            <app-loader mat-card-avatar
+                        *ngIf="isLoading"
+                        [width]="{value: 40, sufix: 'px'}"
+                        [height]="{value: 40, sufix: 'px'}"
+                        [circle]="true"
+                        [aditional]="{'flex-shrink': 0, 'object-fit': 'cover'}"></app-loader>
+
+            <mat-card-title *ngIf="!isLoading">{{title}}</mat-card-title>
+            <mat-card-subtitle *ngIf="!isLoading">{{description}}</mat-card-subtitle>
+
+            <div *ngIf="isLoading"
+                 style="width: 100%;">
+                <app-loader [width]="{value: 50, sufix: '%'}"></app-loader>
+                <app-loader [width]="{value: 100, sufix: '%'}"></app-loader>
+            </div>
+
+        </mat-card-header>
+        <mat-card-content>
+            <div id="img-{{index}}"
+                 style="width: -webkit-fill-available;">
+                <app-loader [width]="'inherit'"
+                            [height]="{value: 150, sufix: 'px'}"
+                            *ngIf="isLoading"></app-loader>
+            </div>
+            <div style="float: right;">
+                <mat-chip-list aria-label="Item selection">
+                    <mat-chip>{{index+1}}</mat-chip>
+                </mat-chip-list>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+    </mat-card>
+</div>
