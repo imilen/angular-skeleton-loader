@@ -1,1 +1,1 @@
-*.* linguist-language=Angular
+*.ts linguist-detectable=true
