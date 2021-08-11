@@ -7,13 +7,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { LoaderModule } from './loader/loader.module';
+import { CardComponent } from './card/card.component';
 
 export const WindowToken = new InjectionToken<Window>('Window');
 export function windowProvider() { return window; }
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
