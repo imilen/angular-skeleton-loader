@@ -17,6 +17,7 @@ interface CardData {
 })
 export class AppComponent {
   title = 'angular-skeleton-loader';
+  data = 'Temporary Data';
 
   list?: CardData[];
   cardWidth = 400;
@@ -41,6 +42,7 @@ export class AppComponent {
 
   ngAfterViewInit(): void {
     setTimeout(() => {
+      this.data = 'Real Data';
       this.list = Array(8).fill({
         title: 'Angular',
         img: '../../assets/angular-wallpaper.png',

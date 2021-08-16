@@ -1,18 +1,22 @@
-<div fxLayout="row wrap"
-     fxFill
-     fxFlexAlign="center"
-     style="overflow: auto;">
-   <div fxFlex="grow"
-        fxLayout="row wrap"
-        fxLayoutAlign="center center"
+<div fxFlex
+     fxFlexAlign="center">
+   <div fxFlex
+        fxLayout="column"
         fxFlexAlign="center">
-      <div *ngFor="let item of list; let i = index"
-           style="margin: 10px">
-         <app-card [title]="item.title"
-                   [img]="item.img"
-                   [description]="item.description"
-                   [logo]="item.logo"
-                   [index]=i></app-card>
+      <h1 style="color: white; text-align: center;">
+         {{data}}
+      </h1>
+      <div fxFlex
+           fxLayout="row wrap"
+           fxLayoutAlign="center none">
+         <div *ngFor="let item of list; let i = index"
+              style="margin: 10px">
+            <app-card [title]="item.title"
+                      [img]="item.img"
+                      [description]="item.description"
+                      [logo]="item.logo"
+                      [index]=i></app-card>
+         </div>
       </div>
    </div>
 </div>
